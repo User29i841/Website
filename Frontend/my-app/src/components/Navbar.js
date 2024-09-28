@@ -5,6 +5,7 @@ import ProfileDropdown from './ProfileDropDown';
 import LoginModal from './Modals/LoginModal';
 import VerifyModal from './Modals/VerifyModal';
 import { toast } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   const serverbase = 'http://localhost:8080';
@@ -109,7 +110,9 @@ function NavBar() {
   return (
     <>
       <div className="navbar">
-        <img src={logo} className="logo" alt="logo" />
+        <Link to="/"> 
+          <img src={logo} className="logo" alt="logo" />
+        </Link>
 
         {isLoggedIn ? (
           <>
