@@ -1,0 +1,41 @@
+.pagenotfound-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagenotfound-content {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pagenotfound-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333; 
+}
+
+.pagenotfound-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #666; 
+}
+
+.home-button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #010c15bc; 
+}

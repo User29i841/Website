@@ -5,6 +5,7 @@ import ProfileDropdown from './ProfileDropDown';
 import LoginModal from './Modals/LoginModal';
 import VerifyModal from './Modals/VerifyModal';
 import { toast } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   const serverbase = 'http://localhost:8080';
@@ -27,7 +28,6 @@ function NavBar() {
     setIsLoggedIn(false);
     setProfileImageUrl('');
     toast.success('Logged out successfully');
-    window.location.reload();
   };
 
   useEffect(() => {
@@ -36,9 +36,9 @@ function NavBar() {
     
     if (token && user) {
       setIsLoggedIn(true);
-      setProfileImageUrl(user?.thumbnail || '');
+      setProfileImageUrl(user.thumbnail || '');
     }
-  }, []);
+  }, []); 
 
   const performLogin = async () => {
     try {
@@ -54,6 +54,7 @@ function NavBar() {
 
       if (userInfoData.userId === undefined) {
         toast.error('Login Failed: Undefined User');
+        return; 
       }
 
       const codeResponse = await fetch(`${serverbase}/code`, {
@@ -94,7 +95,9 @@ function NavBar() {
           userid: body.robloxId, 
           username: body.username 
         }));
-        window.location.reload();
+
+        setIsLoggedIn(true);
+        setProfileImageUrl(body.pfpUrl);
       } else {
         toast.error("Code doesn't match");
       }
@@ -107,7 +110,9 @@ function NavBar() {
   return (
     <>
       <div className="navbar">
-        <img src={logo} className="logo" alt="logo" />
+        <Link to="/"> 
+          <img src={logo} className="logo" alt="logo" />
+        </Link>
 
         {isLoggedIn ? (
           <>
