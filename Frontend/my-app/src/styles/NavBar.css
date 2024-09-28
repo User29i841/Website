@@ -1,0 +1,108 @@
+.navbar {
+    border: 1px solid darkgray;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    position: fixed;
+    top: 0rem; 
+    left: 0rem; 
+    right: 0rem; 
+    height: 3.4375rem; 
+    background-color: #292E55;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.nav-bar-login-button {
+    background-color: white;
+    color: black;
+    padding: 0.3rem 0.5rem; 
+    border-radius: 0.3125rem; 
+    border: none;
+    cursor: pointer;
+    font-size: 1rem; 
+    font-weight: bold;
+    position: relative;
+}
+
+.balance {
+    display: flex;
+    border-radius: 0.3125rem; 
+    width: 5rem; 
+    height: 2rem; 
+    border: 1px solid white;
+    margin: 0 auto; 
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    position: relative;
+    filter: drop-shadow(0px 0px 10px #9370db);
+    cursor: pointer;
+    width: 8rem; 
+    height: 3rem; 
+}
+
+.logoutButton, .profileButton {
+    font-weight: bold;
+    color: white;
+    background-color: #20284A;
+    border: none;
+    width: 5.625rem; 
+    height: 2.5rem; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.logoutButton:hover, .profileButton:hover {
+    background-color: #32385F;
+}
+
+.nav-chat-and-loginbutton-container {
+    display: flex;
+    align-items: center; 
+}
+
+@media (min-width: 360px) {
+
+}
+
+@media (min-width: 480px) {
+    .logo {
+        width: 9rem;
+    }
+
+    .balance {
+        width: 6rem;
+    }
+}
+
+@media (min-width: 840px) {
+    .logo {
+        width: 10rem;
+        height: 3.25rem;
+    }
+
+    .balance {
+        width: 7rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    .logo {
+        width: 12rem;
+        height: 3.5rem;
+    }
+
+    .balance {
+        width: 10rem;
+    }
+}
+
+@media (min-width: 1440px) {
+
+}

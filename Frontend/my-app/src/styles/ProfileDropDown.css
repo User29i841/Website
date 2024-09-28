@@ -1,0 +1,72 @@
+.dropdownContent {
+    border: 1px solid darkgray;
+    position: absolute;
+    top: 3.125rem; 
+    border-radius: 0.3125rem; 
+    background-color: #20284A;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    right: 4.375rem; 
+    width: 3.75rem; 
+    height: 4.375rem; 
+    gap: 0.625rem; 
+}
+
+.logoutButton, .profileButton {
+    font-weight: bold;
+    color: white;
+    background-color: #20284A;
+    border: none;
+    width: 5.625rem; 
+    height: 2.5rem; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.logoutButton:hover, .profileButton:hover {
+    background-color: #32385F;
+}
+
+.profileImage {
+    position: relative; 
+    cursor: pointer;
+    padding: 0.625rem; 
+    border-radius: 50%;
+    width: 2rem; 
+    height: 2rem; 
+}
+
+@media (min-width: 360px) {
+
+}
+
+@media (min-width: 480px) {
+    .profileImage {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+}
+
+@media (min-width: 840px) {
+    .profileImage {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    .profileImage {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+@media (min-width: 1440px) {
+
+}
