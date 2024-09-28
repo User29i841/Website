@@ -76,6 +76,10 @@
         width: 9rem;
     }
 
+    .nav-bar-login-button {
+        padding: 0.35rem 0.55rem; 
+    }
+
     .balance {
         width: 6rem;
     }
@@ -85,6 +89,10 @@
     .logo {
         width: 10rem;
         height: 3.25rem;
+    }
+
+    .nav-bar-login-button {
+        padding: 0.4rem 0.6rem; 
     }
 
     .balance {
@@ -97,6 +105,11 @@
         width: 12rem;
         height: 3.5rem;
     }
+
+    .nav-bar-login-button {
+        padding: 0.5rem 0.7rem; 
+    }
+
 
     .balance {
         width: 10rem;
