@@ -8,7 +8,7 @@ import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
-  const serverbase = 'http://localhost:8080';
+  const serverbase = 'http://localhost:8000';
   
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);

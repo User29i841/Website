@@ -24,7 +24,7 @@ db.once('open', () => {
 });
 
 let messages = [];
-const PORT = process.env.PORT || 8080; 
+const PORT = process.env.PORT || 8000; 
 const server = app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
@@ -160,13 +160,6 @@ app.post("/userInfo", async (request, response) => {
         userId: robloxId
     })
 })
-
-app.get('/inventory', async (request, response) => {
-    const inventory = [];
-    response.json({
-        inventory: inventory
-    });
-});
 
 app.post("/code", async (request, response) => {
     const { username } = request.body

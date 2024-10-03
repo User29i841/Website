@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { IoChatboxOutline } from "react-icons/io5";
 import socket from './socket';
 
+const serverbase = 'http://localhost:8000';
+
 function ChatWindow({ isLoggedIn, toggleLoginModal }) {
   const [showChat, setIsShowChat] = useState(false);
   const [messages, setMessages] = useState([]);
@@ -9,6 +11,23 @@ function ChatWindow({ isLoggedIn, toggleLoginModal }) {
   const chatWindowRef = useRef(null);
 
   const toggleChat = () => setIsShowChat(!showChat);
+
+  useEffect(() => {
+    const fetchMessages = async () => {
+      try {
+        const response = await fetch(`${serverbase}/messages`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setMessages(data);
+        console.log(data);
+      } catch (error) {
+        console.error('Error fetching messages:', error);
+      }
+    };
+    fetchMessages();
+  }, []);
 
   useEffect(() => {
     const handleIncomingMessage = (data) => {
